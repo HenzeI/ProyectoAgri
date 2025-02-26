@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/app.js"></script>
+    <title>Proyecto Agricola</title>
+</head>
+<body>
+    <div id="index">
+        <h2>Autenticación</h2>
+        <h3 id="tipoAutenticacion">Iniciar Sesion</h3>
+        <form method="get" action="./dashboard.html" id="formulario">
+            <p>Correo Electronico</p>
+            <p><input type="email" id="campoEmail" required></p>
+            
+            <p>Contraseña</p>
+            <p><input type="password" id="campoPassword" required></p>
+            
+            <input type="submit" id="iniciarSesion" value="Iniciar Sesion">
+            <input type="button" id="registrarse" value="Registrarse">
+            <p><a id="cambiarContrasena" href="#">¿Olvidate la contraseña?</a></p>
+        </form>
+    </div>
+</body>
+</html>
