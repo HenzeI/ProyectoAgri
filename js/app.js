@@ -19,6 +19,8 @@ function inicio() {
     let campoContrasena = document.getElementById("campoPassword")
 
     let formulario = document.getElementById("formulario")
+    let registro = document.getElementById("registrarse")
+    let cambiarContrasena = document.getElementById("cambiarContrasena")
 
     if (formulario) {
         formulario.addEventListener("submit", async (e) => {
@@ -38,6 +40,25 @@ function inicio() {
         })
     }
 
+    if (registro) {
+        registro.addEventListener("click", async (e) => {
+
+            if (localStorage.getItem("usuario"))
+                localStorage.removeItem("usuario")
+    
+            try { 
+                let usuario = await registrarse(campoEmail.value, campoContrasena.value)
+    
+                localStorage.setItem("usuario", usuario)
+    
+                console.log(usuario)
+            } catch (error) {
+                console.log(error)
+            }
+        })
+    }
+
+    
 
 
     if (dashboardDOM) {
